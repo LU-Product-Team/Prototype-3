@@ -1,0 +1,92 @@
+var NewEra = NewEra || {};
+
+$(document).ready(function() {
+  
+  IS_ALLOWED_TO_SUBMIT_FORM = true;
+  ARE_SCRIPTS_LOADED = true;
+  
+  if(document.getElementById( "error_space" )) {
+    CONTAINS_ERROR_SPACE = true;
+  }
+  
+  //this function "get url parameter" returns the URL parameter from the request
+  function gup( name )
+  {
+    name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+    var regexS = "[\\?&]"+name+"=([^&#]*)";
+    var regex = new RegExp( regexS );
+    var results = regex.exec( window.location.href );
+    if( results == null )
+      return "";
+    else
+      return results[1];
+  }
+  
+  NewEra.submitCheck =  function() {
+    //CLEAR ERROR SECTION
+    $( "#error_space" ).html("");
+    
+    // find out if this was preloaded record
+    var preloaded = gup("id");
+    
+    //==========EMAILS
+    
+    // if it is not preloaded, then check email and confirm email
+    if (!preloaded) {
+      
+      var primaryEmailValid = NewEra.isValidEmail("/ctx/account/@email");
+      if (primaryEmailValid !== true) {
+          $( "#error_space" ).html(primaryEmailValid);
+          return false;
+      }
+      
+      var confirmationEmailValid = NewEra.isValidEmail("/ctx/vars/email2");
+      if (confirmationEmailValid !== true) {
+          $( "#error_space" ).html(confirmationEmailValid);
+          return false;
+      }
+      
+      var emailCompare = NewEra.emailCompare("/ctx/account/@email" , "/ctx/vars/email2");
+      if (emailCompare !== true) {
+          $( "#error_space" ).html(emailCompare);
+          return false;
+      }
+    }
+    
+    // NOTE: /ctx/account/@email is already stored in database, using the form data
+    // but we also need to set the preference record email address to link the two records
+    document.controller.setValue( "/ctx/account/preference/@email", document.controller.getValue("/ctx/account/@email"));
+    
+    //===========END EMAILS
+    
+    //==========ZIP CODES
+    
+    var zipValid = NewEra.isValidZip("/ctx/account/@zipCode");
+    if (zipValid !== true) {
+        $( "#error_space" ).html(zipValid);
+        return false;
+    }
+    
+    //==========END ZIP CODES
+    
+    //=========PHONE VAILDATION
+    if (
+        NewEra.CheckPhoneNumber('/ctx/account/@homePhone') === false ||
+        NewEra.CheckPhoneNumber('/ctx/account/@mobilePhone') === false ||
+        NewEra.CheckPhoneNumber('/ctx/account/@daytimePhone') === false ||
+        NewEra.CheckPhoneNumber('/ctx/account/@dayPhone') === false ||
+        NewEra.CheckPhoneNumber('/ctx/account/@nightPhone') === false ||
+        NewEra.CheckPhoneNumber('/ctx/account/@cellPhone') === false ||
+        NewEra.CheckPhoneNumber('/ctx/account/@eveningPhone') === false
+    ) {
+      return false;
+    }
+    
+    //=========END PHONE VALIDATION
+    
+    IS_ALLOWED_TO_SUBMIT_FORM = false;
+    
+    // return document.controller.submit('next', '_self', 'YOUR_TRANSITION_VALUE');
+    document.controller.submit('next', '_self' );
+  }
+});

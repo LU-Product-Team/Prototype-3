@@ -1,0 +1,456 @@
+@import url("/nl/core/formRendering.css");
+@import url("/nl/webForms/optOutBanner.css");
+
+html, body {
+  font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+div.page {
+  width: 60em;
+  margin: 0px auto 0px ;
+}
+
+div.logo {
+  clear: both;
+  float: right;
+  padding-top: 10px;
+}
+
+div.titlebar {
+  margin-top: 20px;
+}
+
+h1 {
+  font-size: 120%;
+}
+
+.header .row {
+  padding: 2px 0px 2px 0px;
+}
+
+div.headertext {
+  padding: 0px 0px 10px 0px;
+  clear: both;
+}
+
+div.page {
+  margin-top: 15px;
+}
+
+input {
+  font: 100% helvetica,arial,verdana,sans-serif;
+}
+
+.errorReport {
+  border: 2px solid red;
+  color: red;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.errorReport li {
+  padding: 2px 10px 2px 0px;
+  list-style-type:  none;
+}
+
+.question th {
+  text-align: left;
+}
+
+div.navigation {
+  margin-top: 10px;
+  clear: both;
+}
+
+.footertext {
+  clear: both;
+  font-size: 80%;
+}
+
+.text-error input, .textarea-error textarea, td.select-error, .password-error input,
+.numeric-error input, .date-error input, .captcha-error input, .linkEdit-error input  {
+  border:           solid red 2px;
+  background-color: #EEEEEE;
+}
+
+.checkbox-error label, .radiolist-error, .subscription-error, .matrixRow-error {
+  color: red;
+}
+
+.matrix th
+{
+  padding: 4px;
+}
+
+.richTextArea_Frame
+{
+  width : 300px;
+}
+
+.richTextArea_Body
+{
+  font: 90% helvetica,arial,verdana,sans-serif;
+}
+
+.richTextArea_Button_bold
+{
+  background-image:url(/xtk/img/form/eArea/icons/stock_text_bold.png);
+  width: 24px;
+  height: 24px;
+  display:inline;
+  border-style:outset;
+  border-width:2px;
+  border-color:silver;
+  background-repeat: no-repeat;
+ margin: 0 auto;
+  cursor : pointer;
+}
+
+.richTextArea_Button_underline
+{
+background-image:url(/xtk/img/form/eArea/icons/stock_text_underline.png);
+width: 24px;
+  height: 24px;
+  display:inline;
+  border-style:outset;
+  border-width:2px;
+  border-color:silver;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  cursor : pointer;
+}
+
+.richTextArea_Button_italic
+{
+  background-image:url(/xtk/img/form/eArea/icons/stock_text_italic.png);
+  width: 24px;
+  height: 24px;
+  display:inline;
+  border-style:outset;
+  border-width:2px;
+  border-color:silver;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  cursor : pointer;
+}
+
+.richTextArea_Button_justifyleft
+{
+  background-image:url(/xtk/img/form/eArea/icons/stock_text_justifyleft.png);
+  width: 24px;
+  height: 24px;
+  display:inline;
+  border-style:outset;
+  border-width:2px;
+  border-color:silver;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  cursor : pointer;
+}
+
+.richTextArea_Button_justifycenter
+{
+  background-image:url(/xtk/img/form/eArea/icons/stock_text_justifycenter.png);
+  width: 24px;
+  height: 24px;
+  display:inline;
+  border-style:outset;
+  border-width:2px;
+  border-color:silver;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  cursor : pointer;
+}
+
+.richTextArea_Button_justifyright
+{
+  background-image:url(/xtk/img/form/eArea/icons/stock_text_justifyright.png);
+  width: 24px;
+  height: 24px;
+  display:inline;
+  border-style:outset;
+  border-width:2px;
+  border-color:silver;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  cursor : pointer;
+}
+
+.richTextArea_Button_justifyfull
+{
+  background-image:url(/xtk/img/form/eArea/icons/stock_text_justifyfull.png);
+  width: 24px;
+  height: 24px;
+  display:inline;
+  border-style:outset;
+  border-width:2px;
+  border-color:silver;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  cursor : pointer;
+}
+
+.richTextArea_Button_source
+{
+  background-image:url(/xtk/img/form/eArea/icons/stock_text_source.png);
+  width: 24px;
+  height: 24px;
+  display: inline;
+  border-style:outset;
+  border-width:2px;
+  border-color:silver;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  cursor : pointer;
+}
+
+.richTextArea_Button_bold:hover
+{
+ border-style:inset;
+}
+
+.richTextArea_Button_underline:hover
+{
+ border-style:inset;
+}
+
+.richTextArea_Button_italic:hover
+{
+ border-style:inset;
+}
+
+.richTextArea_Button_justifyleft:hover
+{
+ border-style:inset;
+}
+
+.richTextArea_Button_justifycenter:hover
+{
+ border-style:inset;
+}
+
+.richTextArea_Button_justifyright:hover
+{
+ border-style:inset;
+}
+
+.richTextArea_Button_justifyfull:hover
+{
+ border-style:inset;
+}
+
+.richTextArea_Button_source:hover
+{
+  border-style:inset;
+}
+
+.row h1
+{
+  font-weight: bold;
+  font-size: 20px;
+  color: #006791;
+}
+
+.row h1.left {
+  display:      block;
+  float:        left;
+}
+
+.row h1.right {
+  display: block;
+  float: right;
+}
+
+.listContent
+{
+  width: 100%;
+}
+
+.listContent th {
+  text-align: left;
+  border: solid #C6D7F7 1px;
+  background-color : #8caae7;
+  padding: 3px;
+  vertical-align: top;
+  white-space: nowrap;
+  color: white;
+  width: 100%;
+}
+
+.listEvenLine
+{
+  background-color : #e8e8e8;
+}
+
+.listOddLine
+{
+  background-color: #f7f8fa;
+}
+
+.listCellClassFirst div
+{
+  padding: 2px 2px 2px 0px
+}
+
+.listCellClass div
+{
+  padding: 2px
+}
+
+.listCellClassLast div
+{
+  padding: 2px 0px 2px 2px
+}
+
+.folderSelector
+{
+  margin-top: 0px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.cellClassTimestamp
+{
+  white-space: nowrap;
+}
+
+.cellClassNumber
+{
+  text-align: right;
+  white-space: nowrap;
+}
+
+.cellClassEnum
+{
+  white-space: nowrap;
+}
+
+.pagebody
+{
+  width: 100%;
+}
+
+a.linkAction, a.linkAction:active, a.linkAction:visited
+{
+  padding-left: 3px;
+  color: rgb(0, 51, 153);
+  cursor: pointer;
+  border:0px;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+a.linkAction img
+{
+  border-style: none;
+  vertical-align: middle;
+}
+
+a.linkAction:hover
+{
+  color: rgb(255, 51, 0);
+  text-decoration: underline;
+  border:0px
+}
+
+.linkProcess
+{
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+a.linkProcess, a.linkProcess:active,  a.linkProcess:visited
+{
+  color: rgb(0, 51, 153);
+  text-decoration:none;
+  vertical-align: middle;
+}
+
+a.linkProcess:hover
+{
+  color: rgb(255, 51, 0);
+  text-decoration:underline;
+}
+
+a.entityLink, a.entityLink:active,  a.entityLink:visited
+{
+  color: rgb(0, 51, 153);
+  text-decoration:none;
+  vertical-align: middle;
+}
+
+a.entityLink:hover
+{
+  color: rgb(255, 51, 0);
+  text-decoration:none;
+}
+
+a.entityLink img
+{
+  border-style: none;
+  vertical-align: middle;
+}
+
+.progressContainer
+{
+  border: solid 1px black;
+  height:  11px;
+  width:  100%;
+  padding: 0px;
+}
+
+.progressBlock
+{
+  height: 11px;
+  background-image: url(/xtk/img/report/bargraph-blue.png);
+  background-repeat: repeat-x ;
+  margin: 1px 0px 0px 0px;
+}
+
+.progressOther
+{
+  background-image: url(/xtk/img/report/bargraph-gray.png);
+  background-repeat: repeat-x ;
+  height: 11px;
+}
+
+.progressInfo
+{
+  white-space: nowrap;
+  text-align: center;
+  font-size: 6pt;
+  color: Black;
+  height: 11px;
+  width: 30px;
+}
+
+.progressStockBar
+{
+  background:#B1D632 none repeat scroll 0% 0%;
+  color:#333333;
+  display:block;
+  height:16px;
+  position:relative;
+  text-indent:14px;
+}
+
+.detailHeader
+{
+  color: #333333;
+}
+
+.detailContent
+{
+  color: rgb(0, 51, 152);
+}
+
+.headerContainer td
+{
+  vertical-align:middle;
+}
+
+td.folderSelector
+{
+  vertical-align: middle;
+}
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/sassy.css">
+    <script src="/jquery.js"></script>
+    <script src="https://kit.fontawesome.com/503b395450.js" crossorigin="anonymous"></script>
+    <script src="loadelements.js"></script>
+    <style>
+      #points_balance{
+        background:var(--offwhite);
+        color:var(--offblack);
+        font-weight:300;
+        text-transform:uppercase;
+        font-size:1.5em;
+        text-align:center;
+        padding:1.5em;
+      }
+      #points_balance div{
+        font-weight:600;
+        font-size:3em;
+        padding:.5em 0;
+      }
+      #points_rank{
+        padding:1em;
+        text-align:center;
+        background:var(--offblack);
+        color:var(--offwhite);
+      }
+      #points_winner{
+        padding:1em 2em;
+        background:var(--offwhite);
+        color:var(--offblack);
+        text-align:center;
+      }
+      #points_winner a{
+        margin-left:2em;
+        line-height:40px;
+        padding:0 1em;
+        background:var(--offblack);
+        color:var(--offwhite);
+        border-radius:2px;
+        text-decoration:none;
+        display:inline-block;
+        box-shadow:0 1px 2px var(--dark);
+      }
+    </style>
+  </head>
+  <body>
+    <header id=header></header>
+    <main>
+      <!--List current points balance-->
+      <div id="points_balance">You have earned<div>2475</div>points</div>
+      <!--List current rank-->
+      <div id="points_rank">Your Rank: #23</div>
+      <!--List most recent winner or if you won-->
+      <div id="points_winner">Latest Winner: <b>You!</b> <a href="#">Claim Prize</a></div>
+      <!--list number of raffle tickets-->
+      <!--list date of next drawing-->
+    </main>
+    <footer id=footer></footer>
+  </body>
+</html>

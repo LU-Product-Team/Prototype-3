@@ -1,0 +1,65 @@
+var NewEra = NewEra || {};
+
+NewEra.CheckPhoneNumber = function(accountString) {
+    //GET PHONE VARIABLES
+    var phoneNumber = jQuery.trim(document.controller.getValue(accountString));
+
+    //COUNT NUMBER OF DIGITS IN PHONE NUMBER, IF THE NUMBER IS NOT 10 or 0, GIVE AN ERROR.
+    //IF THE NUMBER IS 10, FORMAT THE NUMBER using (xxx) xxx-xxxx.
+    //IF THE NUMBER IS 0, NEOLANE WILL HANDLE MANDATORY/NON MANDATORY FIELDS.
+
+    //STRIP OUT ALL NON-NUMERICAL CHARACTERS
+    if(typeof(phoneNumber) == "string") {
+        phoneNumber = phoneNumber.replace(/[^0-9]/gi, '');
+        if (phoneNumber.length != 10 && phoneNumber.length != 0) {
+            $( "#error_space" ).html( "<b>Your Phone number must be 10 digits and contain only numbers.</b><BR>");
+            return false;
+        } else if(phoneNumber.length == 10) {
+            phoneNumber = "(" + phoneNumber.substr(0,3) + ") " + phoneNumber.substr(3,3) + "-" + phoneNumber.substr(6,4);
+        }
+        document.controller.setValue(accountString, phoneNumber);
+        
+        
+    }
+};
+
+NewEra.isValidEmail = function(accountString) {
+    var tmpEmail = document.controller.getValue( accountString )
+    
+    if(typeof(tmpEmail) == "string") {
+        if(tmpEmail.length > 0) {
+            if (tmpEmail.indexOf("@") === -1 || tmpEmail.indexOf(".") === -1 || tmpEmail.indexOf(' ') >= 0 || tmpEmail.indexOf(' ') !== -1) {
+                return "Please enter a valid email address.";
+            }
+        }
+    }
+    
+    return true;
+}
+
+NewEra.emailCompare = function(accountString1, accountString2) {
+    var tmpEmail1 = jQuery.trim( document.controller.getValue( accountString1 ) );
+    var tmpEmail2 = jQuery.trim( document.controller.getValue( accountString2 ) );
+
+    if(document.controller.observers.items["/ctx/vars/email2"] !== undefined) {
+        if(tmpEmail1 != tmpEmail2) {
+            return "Please confirm that your primary and confirmation email addresses are the same.";
+        }
+    }
+    
+    return true;
+    
+}
+
+NewEra.isValidZip = function(accountString) {
+    var zipCode = jQuery.trim(document.controller.getValue(accountString));
+
+    if(typeof(zipCode) == "string") {
+        //America && America(long version) && Canada && Canada with space && None required
+        if (zipCode.length != 5 && zipCode.length != 10 && zipCode.length != 6 && zipCode.length != 7 && zipCode.length != 0) {
+            return "<b>Please enter a valid Zip/Postal Code</b>";
+        }
+    }
+
+    return true;
+};
