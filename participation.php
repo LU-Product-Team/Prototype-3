@@ -91,12 +91,26 @@
         </table>
         </div>
 
+        <?php 
+
+        include 'db_baseball.php';
+
+        $sql = "SELECT * FROM questions ORDER BY RAND() LIMIT 1";
+        $result = $conn->query($sql);
+
+        $ran_question = mysqli_fetch_array($result);
+
+        $point = $ran_question['Question_ID'];
+        $question = $ran_question['Question'];
         
+
+
+        ?>
         
         <!-- PARTICIPATION QUESTIONS -->
         <div style="text-align: left; font-weight: bold; font-size: 40px; color: #C4C4C4; margin: 10px 10px 10px 10px;">Earn <span id="ptsval">250</span> Points</div>
         <div id="questions">
-            <div id="question">Trivia: What year was the game of baseball created?</div>
+            <div id="question"><?php echo $question ; ?></div>
             <div class="option" id="optA">
               1) <span>1879</span>
             </div>
@@ -118,18 +132,3 @@
   </body>
 </html>
 
-<?php 
-
-        include 'db_baseball.php';
-
-        $sql = "SELECT * FROM questions ORDER BY RAND() LIMIT 1";
-        $result = $conn->query($sql);
-
-        $ran_question = mysqli_fetch_array($result);
-
-        $point = $ran_question['Question_ID'];
-        $question = $ran_question['Question'];
-        
-
-
-        ?>
