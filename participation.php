@@ -118,18 +118,3 @@
   </body>
 </html>
 
-<?php 
-
-        include 'db_baseball.php';
-
-        $sql = "SELECT * FROM questions ORDER BY RAND() LIMIT 1";
-        $result = $conn->query($sql);
-
-        $ran_question = mysqli_fetch_array($result);
-
-        $point = $ran_question['Question_ID'];
-        $question = $ran_question['Question'];
-        
-
-
-        ?>
