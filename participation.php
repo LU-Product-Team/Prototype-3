@@ -90,6 +90,14 @@
             </tr>
         </table>
         </div>
+
+        <?php 
+
+        include 'db_baseball.php'
+
+        
+
+        ?>
         
         <!-- PARTICIPATION QUESTIONS -->
         <div style="text-align: left; font-weight: bold; font-size: 40px; color: #C4C4C4; margin: 10px 10px 10px 10px;">Earn <span id="ptsval">250</span> Points</div>
