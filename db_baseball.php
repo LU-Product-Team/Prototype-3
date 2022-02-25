@@ -1,6 +1,6 @@
 <?php
 
-namespace GCI;
+namespace baseball;
 
 /**
  * Generic datasource class for handling DB operations.
