@@ -131,7 +131,7 @@
 
     </main>
     <footer id=footer></footer>
-    <script src="questions.js"></script>
+    <!--<script src="questions.js"></script> -->
   </body>
 </html>
 
