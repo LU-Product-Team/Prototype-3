@@ -36,8 +36,8 @@ function loadQuestion(){
     answerD = questions[randInt][5];
 
     // Load question content into site
-    $('#ptsval').text(ptsval);
-    $('#question').text(question);
+    /*$('#ptsval').text(ptsval);
+    $('#question').text(question);*/
     $('.option#optA span').text(answerA);
     $('.option#optB span').text(answerB);
     $('.option#optC span').text(answerC);
