@@ -113,7 +113,7 @@
         <!-- PARTICIPATION QUESTIONS -->
         <div style="text-align: left; font-weight: bold; font-size: 40px; color: #C4C4C4; margin: 10px 10px 10px 10px;">Earn <span id=""><?php echo $point; ?></span> Points</div>
         <div id="questions">
-            <div id="question">Trivia: What year was the game of baseball created?</div>
+            <div id="ion"><?php echo $question; ?></div>
             <div class="option" id="optA">
               1) <span>1879</span>
             </div>
