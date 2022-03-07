@@ -119,7 +119,7 @@
         <div id="questions">
             <div id="question"><?php echo $question; ?></div>
             <div class="option" id="optA">
-              1) <span><?php echo $asnwer; ?></span>
+              1) <span>1879</span>
             </div>
             <div class="option" id="optB">
               2) <span>2021</span>
