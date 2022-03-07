@@ -114,7 +114,7 @@
         $ran_answers = mysqli_fetch_array($answer_result);
 
 
-        $answer = $ran_answer['Answer'];
+        $answer = $ran_answer['answers'];
 
 
         ?>
