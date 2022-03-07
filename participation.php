@@ -111,10 +111,8 @@
         $sql_answer = "SELECT * FROM answers WHERE question_id = $questionID ORDER BY RAND() LIMIT 1";
         $answer_result = $conn->query($sql_answer);
 
-        $ran_answers = mysqli_fetch_array($answer_result);
-
-
-        $answer = $ran_answers['answers'];
+           
+      
 
 
         ?>
@@ -122,9 +120,15 @@
         <div style="text-align: left; font-weight: bold; font-size: 40px; color: #C4C4C4; margin: 10px 10px 10px 10px;">Earn <span id=""><?php echo $point; ?></span> Points</div>
         <div id="questions">
             <div id="question"><?php echo $question; ?></div>
-            <div class="option" id="optA">
-              1) <span><?php echo $answer; ?></span>
-            </div>
+<?php
+        $i=1;
+        while ($ran_answers = mysqli_fetch_array($answer_result))
+        {
+         echo '  <div class="option" id="optA">
+              $i) <span>$answer</span>
+            </div>';
+        }
+            ?>
             <div class="option" id="optB">
               2) <span>2021</span>
             </div>
