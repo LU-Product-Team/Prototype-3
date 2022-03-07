@@ -124,9 +124,9 @@
         $i=1;
         while ($ran_answers = mysqli_fetch_array($answer_result))
         {
-         echo '  <div class="option" id="optA">
+         echo "  <div class='option' id='optA'>
               $i) <span>$answer</span>
-            </div>';
+            </div>";
         }
             ?>
             <div class="option" id="optB">
