@@ -108,13 +108,13 @@
         $point = $ran_question['Point Value'];
         $question = $ran_question['Question'];
         
-        $sql_answer = "SELECT * FROM answers WHERE question_id = $questionID ORDER BY RAND() LIMIT 4";
+        $sql_answer = "SELECT * FROM answers WHERE question_id = $questionID ORDER BY RAND() LIMIT 1";
         $answer_result = $conn->query($sql_answer);
 
         $ran_answers = mysqli_fetch_array($answer_result);
 
 
-        $answer = $ran_answer['answers'];
+        $answer = $ran_answers['answers'];
 
 
         ?>
