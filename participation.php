@@ -108,7 +108,7 @@
         $point = $ran_question['Point Value'];
         $question = $ran_question['Question'];
         
-        $sql_answer = "SELECT * FROM answers WHERE question_id = $questionID ORDER BY RAND() LIMIT 1";
+        $sql_answer = "SELECT * FROM answers WHERE question_id = $questionID ORDER BY RAND() LIMIT 4";
         $answer_result = $conn->query($sql_answer);
 
         $i=1;
@@ -133,13 +133,13 @@
               1) <span><?php echo $answer[1]['answers']; ?></span>
             </div>
             <div class="option" id="optB">
-              2) <span>2021</span>
+              2) <span><?php echo $answer[2]['answers']; ?></span>
             </div>
             <div class="option" id="optC">
-              3) <span>1983</span>
+              3) <span><?php echo $answer[3]['answers']; ?></span>
             </div>
             <div class="option" id="optD">
-              4) <span>1846</span>
+              4) <span><?php echo $answer[4]['answers']; ?></span>
             </div>
         </div>
         <div id="results">Question Results Loading...</div>
