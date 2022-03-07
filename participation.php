@@ -109,8 +109,12 @@
         $question = $ran_question['Question'];
         
         $sql_answer = "SELECT * FROM answers WHERE question_id = $questionID ORDER BY RAND() LIMIT 4";
+        $answer_result = $conn->query($sql_answer);
 
-        $answer = $sql_answer['Answer'];
+        $ran_answers = mysqli_fetch_array($answer_result);
+
+
+        $answer = $ran_answer['Answer'];
 
 
         ?>
