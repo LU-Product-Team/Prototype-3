@@ -117,7 +117,7 @@
         {
           $i++;
 
-          $answer[$i]['asnwer']=$ran_asnwers['answers'];
+          $answer[$i]['answer']=$ran_asnwers['answers'];
 
         }     
       
@@ -130,7 +130,7 @@
             <div id="question"><?php echo $question; ?></div>
 
             <div class="option" id="optA">
-              1) <span><?php echo $answer[1]['asnwers']; ?></span>
+              1) <span><?php echo $answer[1]['answer']; ?></span>
             </div>
             <div class="option" id="optB">
               2) <span>2021</span>
