@@ -104,9 +104,13 @@
 
         $ran_question = mysqli_fetch_array($result);
 
+        $questionID = $ran_question['Question_ID'];
         $point = $ran_question['Point Value'];
         $question = $ran_question['Question'];
         
+        $sql_answer = "SELECT * FROM answers WHERE question_id = $questionID ORDER BY RAND() LIMIT 4";
+
+        $answer = $sql_answer['Answer'];
 
 
         ?>
@@ -115,7 +119,7 @@
         <div id="questions">
             <div id="question"><?php echo $question; ?></div>
             <div class="option" id="optA">
-              1) <span>1879</span>
+              1) <span><?php echo $asnwer; ?></span>
             </div>
             <div class="option" id="optB">
               2) <span>2021</span>
