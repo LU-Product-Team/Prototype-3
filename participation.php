@@ -117,7 +117,7 @@
         {
           
 
-          $answer[$i]['answers']=$ran_asnwers['answers'];
+          $answer[$i]['answers']=$ran_answers['answers'];
           $i++;
         }     
       
