@@ -115,10 +115,10 @@
 
         while($ran_answers = mysqli_fetch_array($answer_result))
         {
+          
+
+          $answer[$i]['answers']=$ran_asnwers['answers'];
           $i++;
-
-          $answer[$i]['answer']=$ran_asnwers['answers'];
-
         }     
       
 
@@ -130,7 +130,7 @@
             <div id="question"><?php echo $question; ?></div>
 
             <div class="option" id="optA">
-              1) <span><?php echo $answer[1]['answer']; ?></span>
+              1) <span><?php echo $answer[1]['answers']; ?></span>
             </div>
             <div class="option" id="optB">
               2) <span>2021</span>
