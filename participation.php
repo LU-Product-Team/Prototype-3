@@ -16,6 +16,18 @@
 
     </style>
   </head>
+  <script>
+    //JAVA SCRIPT FOR CORRECT ANSWER
+$("body").on("click", ".option", function(){
+    userSelected = $(this).attr('id');
+    correctAnswer = questions[randInt][6];
+    if (userSelected = correctAnswer){
+        alert("Correct answer!");
+    }else{
+        alert("Incorrect answer!");
+    }
+});
+  </script>
 
   <!-- CONTENT FOR MAIN PAGE -->
   <body style="background-color:#242424;">
@@ -118,6 +130,7 @@
           
 
           $answer[$i]['answers']=$ran_answers['answers'];
+          $correct[$i]['correct_answers']=$ran_answers['correct_answers'];
           $i++;
         }     
       
