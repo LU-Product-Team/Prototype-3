@@ -124,6 +124,8 @@
       
 
 
+        
+
         ?>
         <!-- PARTICIPATION QUESTIONS -->
         <div style="text-align: left; font-weight: bold; font-size: 40px; color: #C4C4C4; margin: 10px 10px 10px 10px;">Earn <span id=""><?php echo $point; ?></span> Points</div>
@@ -131,7 +133,7 @@
             <div id="question"><?php echo $question; ?></div>
 
             <div class="option" id="optA">
-              1) <span><?php echo $answer[1]['answers']; ?></span>
+              1) <span onclick="correct(<?php echo $answer[1]['correct_answers']; ?>)"><?php echo $answer[1]['answers']; ?></span>
             </div>
             <div class="option" id="optB">
               2) <span><?php echo $answer[2]['answers']; ?></span>
@@ -147,7 +149,17 @@
 
     </main>
     <footer id=footer></footer>
-    <script src="questions.js"></script>
+    <!--<script src="questions.js"></script>-->
+    <script>
+
+    function correct(id){
+    if (id = 1){
+        alert("Correct answer!");
+    }else{
+        alert("Incorrect answer!");
+    }
+  }
+    </script>
   </body>
 </html>
 
