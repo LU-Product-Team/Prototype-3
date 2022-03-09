@@ -106,10 +106,10 @@ footer{
     bottom:0px;
     z-index:2;
     margin: 0;
-    padding: 0;
+    padding: 0 20px 0 0;
     
-    background-color: rgb(48, 1, 102);
-    text-align: center;
+    background-color: rgb(3, 28, 81);
+    text-align: right;
     color: white;
     font-size: 20px;
 }
@@ -121,7 +121,7 @@ footer > div {
 }
 
 body.schedule_body {
-    background-color: rgb(255, 255, 255) ;
+    background-color: #242424;
 }
 div.main { 
     width: 100%;
@@ -131,26 +131,34 @@ div.main {
 div.upcoming_past {
     width: 100%;
     height: 100%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-shadow: 0 0 1px #ffffff, 0 0 1px #ffffff;
+    color: #C4C4C4;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    letter-spacing: 3px;
     text-align: center;
     font-size: 30px;
-
+    padding-top: 20px;
 }
 div.schedule_game {
-    width:100%;
-    height:30%;
-    border:5px solid rgb(0, 0, 0);
-    outline: #f0f0f0; 
-    background-color: rgb(192, 189, 189);
+
+    font-family: 'Rubik', sans-serif;
+    color: #C4C4C4;
+    width: 95%;
+    margin: 10px auto 10px auto;
+    padding: 10px;
+    border-radius: 15px;
+    background: #494949;
     display: flex;
 }
 div.game_results {
-    width:100%;
-    height:30%;
-    border:5px solid rgb(0, 0, 0);
-    outline: #f0f0f0; 
-    background-color: rgb(192, 189, 189);
+
+    font-family: 'Rubik', sans-serif;
+    color: #C4C4C4;
+    width: 95%;
+    margin: 10px auto 10px auto;
+    padding: 10px;
+    border-radius: 15px;
+    background: #494949;
     display: flex;
 }
 
@@ -180,8 +188,7 @@ div.schedule_col1 img {
 div.schedule_col2 div.game_info {
     float: left;
     left: 30px;
-    font-family:'Times New Roman', Times, serif;
-    
+    font-family: 'Rubik', sans-serif;    
 }
 
 div.schedule_col2 div.game_date {
@@ -210,7 +217,7 @@ div.result_col1 div.score {
     padding-top: 6%;
     padding-left: 20px;
     font-size: 150%;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Rubik', sans-serif;
 
 }
 
