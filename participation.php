@@ -155,7 +155,9 @@
     function correct(id){
     if (id = 1){
         alert("Correct answer!");
-    }else{
+    }
+    else if (id = 0)
+    {
         alert("Incorrect answer!");
     }
   }
