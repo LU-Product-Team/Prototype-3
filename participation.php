@@ -133,16 +133,16 @@
             <div id="question"><?php echo $question; ?></div>
 
             <div class="option" id="optA">
-              1) <span onclick="correct(<?php echo $answer[1]['correct_answers']; ?>)"><?php echo $answer[1]['answers']; ?></span>
+              1) <span onclick="correct(<?php echo $correct[1]['correct_answers']; ?>)"><?php echo $answer[1]['answers']; ?></span>
             </div>
             <div class="option" id="optB">
-              2) <span onclick="correct(<?php echo $answer[2]['correct_answers']; ?>)"><?php echo $answer[2]['answers']; ?></span>
+              2) <span onclick="correct(<?php echo $correct[2]['correct_answers']; ?>)"><?php echo $answer[2]['answers']; ?></span>
             </div>
             <div class="option" id="optC">
-              3) <span onclick="correct(<?php echo $answer[3]['correct_answers']; ?>)"><?php echo $answer[3]['answers']; ?></span>
+              3) <span onclick="correct(<?php echo $correct[3]['correct_answers']; ?>)"><?php echo $answer[3]['answers']; ?></span>
             </div>
             <div class="option" id="optD">
-              4) <span onclick="correct(<?php echo $answer[4]['correct_answers']; ?>)"><?php echo $answer[4]['answers']; ?></span>
+              4) <span onclick="correct(<?php echo $correct[4]['correct_answers']; ?>)"><?php echo $answer[4]['answers']; ?></span>
             </div>
         </div>
         <div id="results">Question Results Loading...</div>
@@ -153,7 +153,7 @@
     <script>
 
     function correct(a){
-    if (a = 1){
+    if (a == 1){
         alert("Correct answer!");
     }
     else if (a == 0)
