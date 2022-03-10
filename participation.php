@@ -153,7 +153,7 @@
     <script>
 
     function correct(a){
-    if (a == 1){
+    if (a = 1){
         alert("Correct answer!");
     }
     else if (a == 0)
