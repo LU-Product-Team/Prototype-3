@@ -152,11 +152,11 @@
     <!--<script src="questions.js"></script>-->
     <script>
 
-    function correct(id){
-    if (id = 1){
+    function correct(a){
+    if (a = 1){
         alert("Correct answer!");
     }
-    else if (id = 0)
+    else if (a = 0)
     {
         alert("Incorrect answer!");
     }
