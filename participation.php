@@ -155,6 +155,7 @@
     function correct(a){
     if (a == 1){
         alert("Correct answer!");
+        addPoints(<?php echo $point; ?>);
     }
     else if (a == 0)
     {

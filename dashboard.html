@@ -46,11 +46,11 @@
       }
     </style>
   </head>
-  <body>
+  <body onload="autofillPoints()">
     <header id=header></header>
     <main>
       <!--List current points balance-->
-      <div id="points_balance">You have earned<div>2475</div>points</div>
+      <div id="points_balance">You have earned<div class="points"></div>points</div>
       <!--List current rank-->
       <div id="points_rank">Your Rank: #23</div>
       <!--List most recent winner or if you won-->
@@ -59,5 +59,6 @@
       <!--list date of next drawing-->
     </main>
     <footer id=footer></footer>
+    <script src="./js/loadPoints.js"></script>
   </body>
 </html>
