@@ -16,6 +16,10 @@
     position:relative;
     font-family: 'Roboto', sans-serif;
 }
+.clear{
+    clear:both;
+    display:block;
+}
 /* End simple destyle */
 /* Begin items with smooth transition */
 header .fa,nav,nav a{

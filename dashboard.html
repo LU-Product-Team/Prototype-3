@@ -6,6 +6,36 @@
     <script src="https://kit.fontawesome.com/503b395450.js" crossorigin="anonymous"></script>
     <script src="loadelements.js"></script>
     <style>
+      #points_animation{
+        background:#C4C4C4;
+        color: #242424;
+        font-size:70%;
+        text-align:center;
+        padding:1.5em;
+        border-bottom:1px solid rgba(0,0,0,.12);
+      }
+      .points_animation_column{
+        float:left;
+        padding-top:125px;
+      }
+      .points_animation_column > div:first-child{
+        position:absolute;
+        top:0;
+        left:15%;
+        right:15%;
+        height:calc(100% - 20px);
+      }
+      .points_animation_column > div:first-child div{
+        position:absolute;
+        bottom:0;
+        left:0;
+        right:0;
+        height:0%;
+        transition:height .5s ease;
+        border-radius:5% 5% 0 0;
+        background:rgb(3, 28, 81);
+        border-bottom:1px solid rgb(3,28,81);
+      }
       #points_balance{
         background:#C4C4C4;
         color: #242424;
@@ -49,6 +79,13 @@
   <body onload="autofillPoints()">
     <header id=header></header>
     <main>
+      <div id="points_animation">
+        <div class="points_animation_column" id="596"><div><div></div></div><div>3/3/22</div></div>
+        <div class="points_animation_column" id="1789"><div><div></div></div><div>3/17/22</div></div>
+        <div class="points_animation_column" id="1193"><div><div></div></div><div>3/31/22</div></div>
+        <div class="points_animation_column" id="0"><div><div></div></div><div>4/7/22</div></div>
+        <div class="clear"></div>
+      </div>
       <!--List current points balance-->
       <div id="points_balance">You have earned<div class="points"></div>points</div>
       <!--List current rank-->
