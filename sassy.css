@@ -124,6 +124,10 @@ footer > div {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+footer > div > span {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 body.schedule_body {
     background-color: #242424;
 }

@@ -163,6 +163,7 @@
     }
   }
     </script>
+    <script src="./js/points.js"></script>
   </body>
 </html>
 
