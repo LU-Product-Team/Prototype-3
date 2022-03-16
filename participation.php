@@ -2,9 +2,9 @@
 <html>
   <head>
     <link rel="stylesheet" href="/sassy.css">
-    <script src="/jquery.js"></script>
+    <script src="/./js/jquery.js"></script>
     <script src="https://kit.fontawesome.com/503b395450.js" crossorigin="anonymous"></script>
-    <script src="loadelements.js"></script>
+    <script src="./js/loadElements.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
@@ -27,11 +27,11 @@
             <div>
                 LIB<br>22 - 14
             </div>
-            <img src="Liberty-Flames-logo (1).png" alt="Liberty Logo" width="70" height="40">
+            <img src="./images/Liberty-Flames-logo (1).png" alt="Liberty Logo" width="70" height="40">
             <div style="line-height: 40px; font-size: 30px;">
                 7 - 5
             </div>
-            <img src="Cambell logo.png" alt="Liberty Logo" width="55" height="40">
+            <img src="./images/Cambell logo.png" alt="Liberty Logo" width="55" height="40">
             <div>
                 CAM<br>13 - 25
             </div>
@@ -149,7 +149,7 @@
 
     </main>
     <footer id=footer></footer>
-    <!--<script src="questions.js"></script>-->
+    <!--<script src="./js/questions.js"></script>-->
     <script>
 
     function correct(a){
