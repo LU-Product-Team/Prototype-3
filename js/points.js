@@ -17,7 +17,7 @@ function autofillPoints() {
 function getPoints() {
     var points;
     if(localStorage.getItem("points"))
-        points = localStorage.getItem("points");
+        points = +localStorage.getItem("points");
     else
         points = 0;
     return points;
@@ -27,7 +27,7 @@ function getPoints() {
 function addPoints(pointsToAdd) {
     var points;
     if(localStorage.getItem("points"))
-        points = localStorage.getItem("points");
+        points = +localStorage.getItem("points");
     else
         points = 0;
     
