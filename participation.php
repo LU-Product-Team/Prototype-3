@@ -156,7 +156,6 @@
     if (a == 1){
         alert("Correct answer!");
         addPoints(<?php echo $point; ?>);
-        console.log(<?php echo $point; ?>);
     }
     else if (a == 0)
     {
@@ -165,7 +164,6 @@
   }
     </script>
     <script src="./js/points.js"></script>
-    <?php echo $point; ?>
   </body>
 </html>
 
