@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="/sassy.css">
     <script src="/./js/jquery.js"></script>
     <script src="https://kit.fontawesome.com/503b395450.js" crossorigin="anonymous"></script>
-    <script src="./js/loadElements.js"></script>
+    <script src="./js/loadelements.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
