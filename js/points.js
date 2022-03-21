@@ -39,6 +39,22 @@ function addPoints(pointsToAdd) {
     autofillPoints();
 }
 
+// Subtract points from user's points
+function subtractPoints(pointsToSubtract) {
+    var points;
+    if(localStorage.getItem("points"))
+        points = +localStorage.getItem("points");
+    else
+        points = 0;
+    
+    points -= pointsToSubtract;
+
+    localStorage.setItem("points", points);
+
+    // Update page with new point value
+    autofillPoints();
+}
+
 // Set stored points to value. ERASES CURRENT POINTS.
 function setPoints(pointValue) {
     localStorage.setItem("points", pointValue);
