@@ -110,11 +110,25 @@
       <!--List most recent winner or if you won-->
       <div id="points_winner">Latest Winner: <b>You!</b> <a href="#">Claim Prize</a></div>
       <!--list number of raffle tickets-->
-      <div id="enter_raffle">Enter Raffle (50 points): <button onclick="subtractPoints(50)">Enter!</button></div>
+      <div id="enter_raffle">Enter Raffle (50 points): <button onclick="raffle(Math.round(Math.random()))">Enter!</button></div>
       <!--list date of next drawing-->
     </main>
     <footer id=footer></footer>
     <script src="./js/loadelements.js"></script>
     <script src="./js/points.js"></script>
+    <script>
+
+      function raffle(a) {
+        if (a == 1) {
+          alert("Congrats! You won the raffle");
+          addPoints(100);
+        }
+        else {
+          alert("Sorry, you did not win the raffle");
+          subtractPoints(50);
+        }
+
+      }
+    </script>
   </body>
 </html>
